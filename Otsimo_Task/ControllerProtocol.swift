@@ -10,7 +10,7 @@ import UIKit
 
 protocol ControllerProtocol {
     
-    var x:ViewProtocol!{get set}
+    var viewProtocol:ViewProtocol!{get set}
         
     var next:String!{get set}
     

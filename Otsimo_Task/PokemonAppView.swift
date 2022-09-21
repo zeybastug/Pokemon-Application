@@ -49,7 +49,7 @@ class PokemonAppView: UIViewController {
         loadingView.layer.masksToBounds = true;
                 
         pokemonController = PokemonAppController()
-        pokemonController.x = self
+        pokemonController.viewProtocol = self
         
         secondView.isHidden = true
         

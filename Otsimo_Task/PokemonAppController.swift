@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonAppController: ControllerProtocol {
     
-    var x:ViewProtocol!
+    var viewProtocol:ViewProtocol!
     
     var isDataLoading:Bool!
         
@@ -19,17 +19,16 @@ class PokemonAppController: ControllerProtocol {
     var next:String!
     
     func getPokemonList(url:URL){
-        x.loadingView.isHidden = false
-        x.firstView.isHidden = true
-       // let url = URL(string: "https://pokeapi.co/api/v2/pokemon/")!
+        viewProtocol.loadingView.isHidden = false
+        viewProtocol.firstView.isHidden = true
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                 if let data  = data {
                     do{
-                        let cevap = try JSONDecoder().decode(PokemonResponse.self,from: data)
-                        self.x.setPokemonList(list: cevap.results)
-                        self.next = cevap.next
-                        self.x.loadingView.isHidden = true
-                        self.x.firstView.isHidden = false
+                        let res = try JSONDecoder().decode(PokemonResponse.self,from: data)
+                        self.viewProtocol.setPokemonList(list: res.results)
+                        self.next = res.next
+                        self.viewProtocol.loadingView.isHidden = true
+                        self.viewProtocol.firstView.isHidden = false
                         
                     }catch{
                         print(error.localizedDescription)
@@ -59,8 +58,8 @@ class PokemonAppController: ControllerProtocol {
                             if im != nil {
                                card.setPokemonImage(param: im)
                             }
-                            self.x.setCardValues(card: card)
-                            self.x.loadingView.isHidden=true
+                            self.viewProtocol.setCardValues(card: card)
+                            self.viewProtocol.loadingView.isHidden=true
                         })
                         
                     }catch{
