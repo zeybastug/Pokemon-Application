@@ -24,6 +24,7 @@ This application is developed with Swift Language.
 Tests are done with Iphone 11 simulator.
 
 **ScreenShots**
+
 ![Simulator Screen Shot - iPhone 11 - 2022-09-21 at 12 45 41](https://user-images.githubusercontent.com/102912212/191473114-48a86038-68e6-442e-be09-5663faba1954.png)
 
 ![Simulator Screen Shot - iPhone 11 - 2022-09-21 at 12 46 14](https://user-images.githubusercontent.com/102912212/191473147-bce82b51-9855-44d8-823a-64f9fd76a23b.png)
