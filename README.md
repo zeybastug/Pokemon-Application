@@ -1,5 +1,5 @@
 # Pokemon-Application
-iOS Pokemon Application 
+iOS Pokemon Flip Card Animation 
 
 **Requirements**
 
